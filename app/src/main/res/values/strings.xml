@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">MessengerFirebase</string>
+    <string name="title_sign_in_activity">Messenger</string>
+    <string name="your_email">Your email:</string>
+    <string name="password">Password</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="forgot_password">Forgot password</string>
+    <string name="register">Register</string>
 </resources>
