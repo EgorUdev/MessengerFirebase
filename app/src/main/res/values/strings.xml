@@ -6,4 +6,6 @@
     <string name="btn_login">LOGIN</string>
     <string name="forgot_password">Forgot password</string>
     <string name="register">Register</string>
+    <string name="authentication_failed">Authentication failed.</string>
+    <string name="null_password_or_email_error">Email or Password can not be null</string>
 </resources>
