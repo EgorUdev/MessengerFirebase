@@ -2,10 +2,20 @@
     <string name="app_name">MessengerFirebase</string>
     <string name="title_sign_in_activity">Messenger</string>
     <string name="your_email">Your email:</string>
-    <string name="password">Password</string>
+    <string name="password">Your password:</string>
     <string name="btn_login">LOGIN</string>
     <string name="forgot_password">Forgot password</string>
     <string name="register">Register</string>
     <string name="authentication_failed">Authentication failed.</string>
     <string name="null_password_or_email_error">Email or Password can not be null</string>
+    <string name="registration">Registration</string>
+    <string name="email_registration">Email</string>
+    <string name="password_registration">Password</string>
+    <string name="name_registration">Name</string>
+    <string name="last_name_registration">Last Name</string>
+    <string name="age_registration">How old are you?</string>
+    <string name="btn_sign_up">SIGN UP</string>
+    <string name="forgot_password_title">Forgot password?</string>
+    <string name="your_email_password_reset">Your email:</string>
+    <string name="reset_password_button">RESET PASSWORD</string>
 </resources>

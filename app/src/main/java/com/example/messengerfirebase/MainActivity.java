@@ -1,5 +1,9 @@
 package com.example.messengerfirebase;
 
+import static com.example.messengerfirebase.MainActivity.newIntent;
+
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
@@ -23,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private static final String LOG_TAG = "MainActivity";
+    private static final String EMAIL_KEY = "emailKey";
+    private static final String PASSWORD_KEY = "passwordKey";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,24 +93,24 @@ public class MainActivity extends AppCompatActivity {
 //                });
 
         //Reset password link send
-        String email = "kesorev+2@gmail.com";
-        mAuth.signInWithEmailAndPassword(email, "000000")
-                        .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
-                    @Override
-                    public void onSuccess(AuthResult authResult) {
-
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Log.d(LOG_TAG, Objects.requireNonNull(e.getMessage()));
-                        Toast.makeText(
-                                        MainActivity.this,
-                                        e.getMessage(),
-                                        Toast.LENGTH_SHORT)
-                                .show();
-                    }
-                });
+//        String email = "kesorev+2@gmail.com";
+//        mAuth.signInWithEmailAndPassword(email, "000000")
+//                        .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+//                    @Override
+//                    public void onSuccess(AuthResult authResult) {
+//
+//                    }
+//                }).addOnFailureListener(new OnFailureListener() {
+//                    @Override
+//                    public void onFailure(@NonNull Exception e) {
+//                        Log.d(LOG_TAG, Objects.requireNonNull(e.getMessage()));
+//                        Toast.makeText(
+//                                        MainActivity.this,
+//                                        e.getMessage(),
+//                                        Toast.LENGTH_SHORT)
+//                                .show();
+//                    }
+//                });
 //        mAuth.sendPasswordResetEmail(email)
 //                .addOnSuccessListener(new OnSuccessListener<Void>() {
 //                    @Override
@@ -141,5 +147,12 @@ public class MainActivity extends AppCompatActivity {
                                 .show();
                     }
                 });
+    }
+
+    public static Intent newIntent(Context context) {
+        Intent intent = new Intent(context, MainActivity.class);
+        intent.putExtra(EMAIL_KEY, "email");
+        intent.putExtra(PASSWORD_KEY, "password");
+        return intent;
     }
 }
