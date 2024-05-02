@@ -1,5 +1,6 @@
 package com.example.messengerfirebase;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -104,12 +105,15 @@ public class SignInActivity extends AppCompatActivity {
         });
     }
 
-
     private void initViews() {
         btnRegister = findViewById(R.id.tvRegister);
         btnForgotPassword = findViewById(R.id.tvForgotPassword);
         btnLogin = findViewById(R.id.btnLogin);
         etEmail = findViewById(R.id.etEmail);
         etPassword = findViewById(R.id.etPassword);
+    }
+
+    public static Intent newIntent(Context context) {
+        return new Intent(context, SignInActivity.class);
     }
 }
