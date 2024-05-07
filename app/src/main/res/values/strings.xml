@@ -19,4 +19,6 @@
     <string name="your_email_password_reset">Your email:</string>
     <string name="reset_password_button">RESET PASSWORD</string>
     <string name="log_out">Log Out</string>
+    <string name="reset_link_is_sent">Reset link is sent to your email</string>
+    <string name="please_enter_the_email">Please, enter the email</string>
 </resources>

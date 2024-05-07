@@ -1,6 +1,7 @@
 package com.example.messengerfirebase;
 
 import androidx.annotation.NonNull;
+import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
@@ -10,7 +11,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class UsersActivityViewModel extends ViewModel {
 
     private FirebaseAuth mAuth;
-    private MutableLiveData<FirebaseUser> user;
+    private MutableLiveData<FirebaseUser> user = new MutableLiveData<>();
     private MutableLiveData<String> errorToastMessage;
 
     public UsersActivityViewModel() {
@@ -18,7 +19,7 @@ public class UsersActivityViewModel extends ViewModel {
         mAuth.addAuthStateListener(new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                user.setValue(firebaseAuth.getCurrentUser());
+                    user.setValue(firebaseAuth.getCurrentUser());
             }
         });
     }
@@ -27,7 +28,7 @@ public class UsersActivityViewModel extends ViewModel {
         mAuth.signOut();
     }
 
-    public MutableLiveData<FirebaseUser> getUser() {
+    public LiveData<FirebaseUser> getUser() {
         return user;
     }
 

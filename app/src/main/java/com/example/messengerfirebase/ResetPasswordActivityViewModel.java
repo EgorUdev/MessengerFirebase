@@ -39,7 +39,7 @@ public class ResetPasswordActivityViewModel  extends ViewModel {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
-                                toastMessage.setValue("Reset link is sent to your email");
+                                toastMessage.setValue(String.valueOf(R.string.reset_link_is_sent));
                             } else {
                                 String errorMessage = Objects.requireNonNull(task.getException()).getMessage();
                                 toastMessage.setValue(errorMessage);
@@ -47,7 +47,7 @@ public class ResetPasswordActivityViewModel  extends ViewModel {
                         }
                     });
         } else {
-            toastMessage.setValue("Please, enter the email");
+            toastMessage.setValue(String.valueOf(R.string.please_enter_the_email));
         }
     }
 }
