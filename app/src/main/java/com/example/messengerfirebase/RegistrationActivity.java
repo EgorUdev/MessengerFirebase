@@ -50,12 +50,11 @@ public class RegistrationActivity extends AppCompatActivity {
                 String password = getTrimmedValue(editTextPassword);
                 String name = getTrimmedValue(editTextName);
                 String lastName = getTrimmedValue(editTextLastName);
-                String age = getTrimmedValue(editTextAge);
+                int age = Integer.parseInt(getTrimmedValue(editTextAge));
                 if (!email.isEmpty()
                         && !password.isEmpty()
                         && !name.isEmpty()
                         && !lastName.isEmpty()
-                        && !age.isEmpty()
                 ) {
                     viewModel.register(email, password, name, lastName, age);
                 } else {
