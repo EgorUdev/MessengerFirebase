@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#10000099"
+    android:fitsSystemWindows="true"
     tools:context=".ChatActivity">
 
     <TextView
@@ -45,11 +46,11 @@
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:hint="@string/type_your_message"
-        android:inputType="textMultiLine"
+        android:inputType="textLongMessage"
         android:paddingStart="16dp"
         android:paddingTop="16dp"
-        android:paddingBottom="16dp"
         android:paddingEnd="36dp"
+        android:paddingBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:text="Hello! Long long long long long long long long long long long long message" />
 

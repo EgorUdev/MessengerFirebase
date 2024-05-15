@@ -97,7 +97,7 @@ public class SignInActivity extends AppCompatActivity {
             @Override
             public void onChanged(FirebaseUser firebaseUser) {
                 if (firebaseUser != null) {
-                    Intent intent = UsersActivity.newIntent(SignInActivity.this);
+                    Intent intent = UsersActivity.newIntent(SignInActivity.this, firebaseUser.getUid());
                     startActivity(intent);
                     finish();
                 }
